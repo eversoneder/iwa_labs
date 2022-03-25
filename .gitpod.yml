@@ -7,7 +7,7 @@ image:
 tasks:
   - name: Running MongoDB
     command: mkdir -p data && mongod --dbpath data
-  - init: Install nodemon
+  - name: Install nodemon
     command: npm i -g nodemon && npm i morgan && npm start
 
 
