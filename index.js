@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(logger("tiny"));
 app.use(require('./routes'));
 
-const dbURI = "mongodb://localhost/test";
+
 
 mongoose.connect(process.env.dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
         .then((result) => console.log('connected to db'))
