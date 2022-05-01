@@ -4,24 +4,28 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "nodemon index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mikhail-cct/iwa_labs.git"
+    "url": "git+https://github.com/eversoneder/iwa_labs.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mikhail-cct/iwa_labs/issues"
+    "url": "https://github.com/eversoneder/iwa_labs/issues"
   },
-  "homepage": "https://github.com/mikhail-cct/iwa_labs#readme",
+  "homepage": "https://github.com/eversoneder/iwa_labs#readme",
   "dependencies": {
-    "axios": "^0.26.0",
+    "del": "^6.0.0",
+    "dotenv": "^16.0.0",
     "express": "^4.17.3",
+    "fs": "^0.0.1-security",
     "mongoose": "^6.2.8",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "multer": "^1.4.4",
+    "path": "^0.12.7"
   }
 }
