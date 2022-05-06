@@ -4,7 +4,7 @@ const   express = require("express"),
         router = express.Router(),
         imageCtrl = require('./image-controller'),
         userCtrl = require("./user-controller"),
-        multer = require('multer'),
+        multer = require('multer'), //  upload files / handles enctypes submitted by users
         upload = multer({ dest: module.exports.UPLOAD_PATH });
 
 router.post('/users', userCtrl.createUser);

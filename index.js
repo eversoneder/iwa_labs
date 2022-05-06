@@ -1,8 +1,8 @@
-const   http = require("http"),
-        logger = require("morgan"),
-        express = require("express"),
-        mongoose = require("mongoose"),
-        dotenv = require("dotenv");
+const   http = require("http"), //application protocol
+        logger = require("morgan"), //creates log files for easy debugging
+        express = require("express"), //node.js back-end framework
+        mongoose = require("mongoose"), //js library to connect mongodb to express
+        dotenv = require("dotenv"); //environment variable
 
 let app = express();
 let port = process.env.PORT || 8000;
@@ -10,7 +10,7 @@ let port = process.env.PORT || 8000;
 dotenv.config();
 
 app.use(express.json());
-app.use(logger("tiny"));
+app.use(logger("tiny")); //info preset to be shown
 app.use(require('./routes'));
 
 
