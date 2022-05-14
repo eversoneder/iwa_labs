@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<menu>
+  <section name="Facial">
+    <entry>
+      <item>Deep Cleansing Facial 30min</item>
+      <price>20</price>
+    </entry>
+    <entry>
+      <item>Bio-Clean System + Gommage 75min</item>
+      <price>40</price>
+    </entry>
+  </section>
+  <section name="Waxing">
+    <entry>
+      <item>Upper Lip Wax</item>
+      <price>8</price>
+    </entry>
+    <entry>
+      <item>Underarm Wax</item>
+      <price>12</price>
+    </entry>
+    <entry>
+      <item>Full Leg Wax</item>
+      <price>25</price>
+    </entry>
+    <entry>
+      <item>Bikini Wax</item>
+      <price>10</price>
+    </entry>
+    <entry>
+      <item>Brazilian Wax</item>
+      <price>25</price>
+    </entry>
+  </section>
+  <section name="Eyebrow">
+    <entry>
+      <item>Eyebrow Design</item>
+      <price>12</price>
+    </entry>
+    <entry>
+      <item>Eyebrow Tint</item>
+      <price>10</price>
+    </entry>
+    <entry>
+      <item>Eyebrow Design + Tint</item>
+      <price>20</price>
+    </entry>
+  </section>
+  <section name="Eyelash">
+    <entry>
+      <item>Eyelash Perm</item>
+      <price>30</price>
+    </entry>
+    <entry>
+      <item>Eyelash Tint</item>
+      <price>12</price>
+    </entry>
+    <entry>
+      <item>Eyelash Perm + Tint</item>
+      <price>35</price>
+    </entry>
+  </section>
+  <section name="Massages">
+    <entry>
+      <item>Liporedux Massage/Area</item>
+      <price>40</price>
+    </entry>
+    <entry>
+      <item>Modeling Massage 60min</item>
+      <price>60</price>
+    </entry>
+    <entry>
+      <item>Lymphatic Drainage 60min</item>
+      <price>50</price>
+    </entry>
+  </section>
+</menu>
