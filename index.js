@@ -127,13 +127,13 @@ app.use(require('./routes'));
 
 
 //view engine on client side
-app.use("view engine", "html");
-app.set("views");
+// app.use("view engine", "html");
+// app.set("views");
 
 //load assets
-app.use('/css', express.static(path.resolve(__dirname, "assets/css")));
-app.use('/img', express.static(path.resolve(__dirname, "assets/img")));
-app.use('/js', express.static(path.resolve(__dirname, "assets/js")));
+// app.use('/css', express.static(path.resolve(__dirname, "assets/css")));
+// app.use('/img', express.static(path.resolve(__dirname, "assets/img")));
+// app.use('/js', express.static(path.resolve(__dirname, "assets/js")));
 
 
 mongoose.connect(process.env.dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
