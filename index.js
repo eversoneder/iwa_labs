@@ -125,7 +125,16 @@ app.use(express.json());
 app.use(logger("tiny")); //log preset to be shown
 app.use(require('./routes'));
 
+
+//view engine on client side
 app.use("view engine", "html");
+app.set("views");
+
+//load assets
+app.use('/css', express.static(path.resolve(__dirname, "assets/css")));
+app.use('/img', express.static(path.resolve(__dirname, "assets/img")));
+app.use('/js', express.static(path.resolve(__dirname, "assets/js")));
+
 
 mongoose.connect(process.env.dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
         .then((result) => console.log('connected to db'))
