@@ -1,7 +1,7 @@
 module.exports.UPLOAD_PATH = 'uploads';
 
 const   express = require("express"),
-        router = express.Router(),
+        router = express.Router(), 
         imageCtrl = require('./image-controller'),
         userCtrl = require("./user-controller"),
         multer = require('multer'), //  upload files / handles form-data submitted by users

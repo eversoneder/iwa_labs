@@ -119,11 +119,13 @@ router.post('/post/delete', function(req, res){
 let app = express();
 let port = process.env.PORT || 8000;
 
-dotenv.config(); //already within mongoose.js
+dotenv.config({path:'.env'});
 
 app.use(express.json());
-app.use(logger("tiny")); //info preset to be shown
+app.use(logger("tiny")); //log preset to be shown
 app.use(require('./routes'));
+
+app.use("view engine", "html");
 
 mongoose.connect(process.env.dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
         .then((result) => console.log('connected to db'))
