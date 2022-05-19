@@ -1,10 +1,11 @@
-require(/db/mongoose.js);
-// mongoose = require("mongoose"), //js library to connect mongodb to express
-// dotenv = require("dotenv"), //environment variable
+// require(/db/mongoose.js);
+
 
 const   http = require("http"), //application protocol
         logger = require("morgan"), //creates log files for easy debugging
         express = require("express"), //node.js back-end framework
+        mongoose = require("mongoose"), //js library to connect mongodb to express
+        dotenv = require("dotenv"), //environment variable
 
 //SETTING UP FRONT-END @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         
@@ -118,7 +119,7 @@ router.post('/post/delete', function(req, res){
 let app = express();
 let port = process.env.PORT || 8000;
 
-// dotenv.config(); //already within mongoose.js
+dotenv.config(); //already within mongoose.js
 
 app.use(express.json());
 app.use(logger("tiny")); //info preset to be shown
