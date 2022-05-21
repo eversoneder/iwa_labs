@@ -1,4 +1,4 @@
-const mongoose = require("../database");
+const mongoose = require(".");
 
 const imageSchema = new mongoose.Schema({
     filename: String,

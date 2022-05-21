@@ -1,5 +1,5 @@
 const UPLOAD_PATH = require('../routes/router').UPLOAD_PATH,
-      Image = require('../models/image'),
+      Image = require('../model/image'),
       path = require('path'),
       fs = require('fs'),
       del = require('del');

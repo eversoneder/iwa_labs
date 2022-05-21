@@ -12,8 +12,8 @@ function draw_table(){
         });
 
     };
-    $.("/gegetHTMLuncachedt/html");
-}
+    $.getHTMLuncached("/get/html");
+};
 
 function append(){
     $.ajax({
