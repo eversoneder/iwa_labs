@@ -24,18 +24,14 @@ router.delete('/images/:id', imageCtrl.deleteImage);
 //import render.js
 const services = require('../../services/render');
 
-//index render
-router.get('/', services.homeRoutes);
+//getting index render route from render.js 
+router.get('/', services.homeRoute);
 
-//add-user page render
-router.get('/add-user',(req, res)=>{
-res.render('add_user');
-});
+//getting add-user render route from render.js 
+router.get('/add-user', services.add_user);
 
-//update-user page render
-router.get('/update-user',(req, res)=>{
-res.render('update_user');
-});
+//getting add-update_user render route from render.js 
+router.get('/update-user', services.update_user);
 
 
 

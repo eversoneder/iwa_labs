@@ -5,6 +5,8 @@
     --dark: #2b2d42;
     --light: #adb5bd;
     --white: #ffffff;
+    --lightcyan:  #7cf0ff;
+    --cyan:  #00e1ff;
     --border: #dee2e6;
     --border-btn: #edf2f4;
 }
@@ -76,12 +78,14 @@ a {
     color: var(--white);
 }
 
-/*  gradient color var */
-.text-gradient{
-    background: linear-gradient(to right, #2dcde2, #0029e0);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+/*  cyan color var */
+.text-cyan{
+    color: var(--cyan);
+}
+
+/*  light-cyan color var */
+.text-lightcyan{
+    color: var(--lightcyan);
 }
 
 /*  header navigation bar */
@@ -131,7 +135,7 @@ table{
 
 /* table row hover color change */
 .table tr:hover{
-    background-color:#00268d ;
+    background-color:var(--lightcyan) ;
 }
 
 /* table row hover color change */
