@@ -19,7 +19,7 @@ app.use(morgan('tiny'));
 
 // Setup Front End
 app.set("view engine", "ejs");//html template engine
-// app.set("views", path.resolve(__dirname, "./views"));
+// app.set("views", path.resolve(__dirname, "views.ejs"));
 
 // Load Assets  
 app.use('/css', express.static(path.resolve(__dirname, "views/assets/css")));
@@ -30,7 +30,7 @@ app.use('/css', express.static(path.resolve(__dirname, "views/assets/css")));
 app.use(require('./api/controller/routes/router'))// back-end route
 
 //index render
-app.get('/views',(req, res)=>{
+app.get('/',(req, res)=>{
   res.render('index');
 });
 
