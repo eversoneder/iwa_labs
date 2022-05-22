@@ -24,20 +24,10 @@ app.set("view engine", "ejs");//html template engine
 // Load Assets  
 app.use('/css', express.static(path.resolve(__dirname, "views/assets/css")));
 // app.use('/js', express.static(path.resolve(__dirname, "views/assets/js")));
-// app.use('/img', express.static(path.resolve(__dirname, "frontend/assets/img")));
+// app.use('/img', express.static(path.resolve(__dirname, "views/assets/img")));
 
 // Load CRUD Routes
 app.use(require('./api/controller/routes/router'))// back-end route
-
-//index render
-app.get('/',(req, res)=>{
-  res.render('index');
-});
-
-//add-user page render
-app.get('/add-user',(req, res)=>{
-  res.render('add_user');
-});
 
 app.listen(PORT, function(err) {
   console.log(`Server Listening on Port: ${PORT}`)
