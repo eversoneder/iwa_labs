@@ -19,7 +19,7 @@ app.use(morgan('tiny'));
 
 // Setup Front End
 app.set("view engine", "ejs");//html template engine
-app.set("views", path.resolve(__dirname, "./views"));
+// app.set("views", path.resolve(__dirname, "./views"));
 
 // Load Assets  
 app.use('/css', express.static(path.resolve(__dirname, "views/assets/css")));
@@ -28,6 +28,16 @@ app.use('/css', express.static(path.resolve(__dirname, "views/assets/css")));
 
 // Load CRUD Routes
 app.use(require('./api/controller/routes/router'))// back-end route
+
+//index render
+app.get('/views',(req, res)=>{
+  res.render('index');
+});
+
+//add-user page render
+app.get('add-user',(req, res)=>{
+  res.render('add_user');
+});
 
 app.listen(PORT, function(err) {
   console.log(`Server Listening on Port: ${PORT}`)
