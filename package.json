@@ -2,9 +2,9 @@
   "name": "iwa_labs",
   "version": "1.0.0",
   "description": "IWA CA2",
-  "main": "src/server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon src/server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
