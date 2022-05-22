@@ -35,7 +35,7 @@ app.get('/views',(req, res)=>{
 });
 
 //add-user page render
-app.get('add-user',(req, res)=>{
+app.get('/add-user',(req, res)=>{
   res.render('add_user');
 });
 

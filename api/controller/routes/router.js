@@ -8,16 +8,16 @@ const   express = require("express"),
         upload = multer({ dest: module.exports.UPLOAD_PATH });
 
 //API Endpoint of Users CRUD 
-router.post('/api/users', userCtrl.createUser);
-router.get('/api/users', userCtrl.getUsers);
-router.get('/api/users/:id', userCtrl.getUser);
-router.put('/api/users/:id', userCtrl.updateUser);
-router.delete('/api/users/:id', userCtrl.deleteUser);
+router.post('/users', userCtrl.createUser);
+router.get('/users', userCtrl.getUsers);
+router.get('/users/:id', userCtrl.getUser);
+router.put('/users/:id', userCtrl.updateUser);
+router.delete('/users/:id', userCtrl.deleteUser);
 
 //API Endpoint of Images CRUD 
-router.post('/api/images', upload.single('image'), imageCtrl.uploadImage);
-router.get('/api/images', imageCtrl.getImages);
-router.get('/api/images/:id', imageCtrl.getImage);
-router.delete('/api/images/:id', imageCtrl.deleteImage);
+router.post('/images', upload.single('image'), imageCtrl.uploadImage);
+router.get('/images', imageCtrl.getImages);
+router.get('/images/:id', imageCtrl.getImage);
+router.delete('/images/:id', imageCtrl.deleteImage);
 
 module.exports = router;
