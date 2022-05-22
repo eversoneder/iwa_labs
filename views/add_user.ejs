@@ -1,0 +1,30 @@
+<!-- include header-->
+<%- include('include/_header') %>
+<!-- /include header-->
+
+<!-- Page content-->
+<main id="site-main">
+
+    <div class="container">
+
+        <div class ="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/"><i class="fas fa-angle-double-left"></i>All Users</a>
+            </div>
+        </div>
+
+        <div class="form-title text-center">
+            <h2 class="text-dark">Create New User</h2>
+            <span class="text-light">To create a new user insert the information to the form down below.</span>
+        </div>
+        
+        <!--add user form-->
+        <%- include('include/_userform') %>
+
+    </div>
+</main>
+<!-- /Page content-->
+
+<!-- include footer-->
+<%- include('include/_footer') %>
+<!-- /include footer-->
