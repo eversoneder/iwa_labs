@@ -7,7 +7,8 @@ const   express = require("express"),
         multer = require('multer'), //  upload files / handles form-data submitted by users
         upload = multer({ dest: module.exports.UPLOAD_PATH });
 
-//API Endpoint of Users CRUD 
+
+//Actions - API Endpoint of Users CRUD 
 router.post('/users', userCtrl.createUser);
 router.get('/users', userCtrl.getUsers);
 router.get('/users/:id', userCtrl.getUser);
@@ -21,6 +22,8 @@ router.get('/images/:id', imageCtrl.getImage);
 router.delete('/images/:id', imageCtrl.deleteImage);
 
 
+//Render to get back to user
+
 //import render.js
 const services = require('../../services/render');
 
@@ -32,9 +35,6 @@ router.get('/add-user', services.add_user);
 
 //getting add-update_user render route from render.js 
 router.get('/update-user', services.update_user);
-
-
-
 
 
 

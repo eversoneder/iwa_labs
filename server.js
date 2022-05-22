@@ -3,8 +3,8 @@ const express = require('express'),//node js backend framework
       morgan = require('morgan'),//req logger
       path = require('path');//path directory
 
+//importing mongoose db connection
 const connectDB = require('./api/model/database');
-// connectDB();
 
 // Make express to use json data format instead of using body-parser
 const app = express();
@@ -16,6 +16,8 @@ const PORT = process.env.PORT || 3000;
 // Log requests
 app.use(morgan('tiny'));
 
+//call mongoose db connection
+connectDB();
 
 // Setup Front End
 app.set("view engine", "ejs");//html template engine
