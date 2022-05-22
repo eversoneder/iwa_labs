@@ -8,21 +8,24 @@ const express = require('express'),//node js backend framework
 const app = express();
 app.use(express.json());
 
+// Load Assets  
+app.use('/css', express.static(path.resolve(__dirname, "views/assets/css")));
+// app.use('/js', express.static(path.resolve(__dirname, "views/assets/js")));
+// app.use('/img', express.static(path.resolve(__dirname, "frontend/assets/img")));
+
 // Log requests
 app.use(morgan('tiny'));
 
 // Load CRUD Routes
-app.use(require('./api/routes/router'))// back-end route
-
+app.use(require('./api/controller/routes/router'))// back-end route
 
 // Setup Front End
 app.set("view engine", "ejs");//html template engine
-app.set("views", path.resolve(__dirname, "frontend/pages"));
+app.set("views", path.resolve(__dirname, "views"));
 
-// Load Assets
-app.use('/css', express.static(path.resolve(__dirname, "frontend/assets/css")));
-app.use('/js', express.static(path.resolve(__dirname, "frontend/assets/js")));
-// app.use('/img', express.static(path.resolve(__dirname, "frontend/assets/img")));
+
+
+const connectDB = require('./api/model/database');
 
 dotenv.config();
 const PORT = process.env.PORT || 3000;

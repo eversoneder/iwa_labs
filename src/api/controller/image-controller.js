@@ -1,4 +1,4 @@
-const UPLOAD_PATH = require('../routes/router').UPLOAD_PATH,
+const UPLOAD_PATH = require('./routes/router').UPLOAD_PATH,
       Image = require('../model/image'),
       path = require('path'),
       fs = require('fs'),
